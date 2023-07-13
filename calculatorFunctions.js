@@ -2,15 +2,15 @@
     const resultDisplay = document.querySelector(".result")
     const butonsNumbers = document.querySelectorAll(".number")
     const butonsoperators = document.querySelectorAll(".operator")
-    const numbers = [0,1,2,3,4,5,6,7,8,9]
     
     butonsNumbers.forEach(number => {
         number.addEventListener('click', () => {
             console.log(number.value)
             const clickedButon = number.value
 
-            if (operationDisplay.value === "0") {
+            if (operationDisplay.value === '.') {
                 operationDisplay.value = clickedButon
+                return
             }else{
                 operationDisplay.value += clickedButon
             }
